@@ -32,7 +32,7 @@ after_build:
   - cmd: >-
       mkdir tmp
 
-      copy target\debug\beep.exe tmp\beep.exe
+      copy target\debug\example\beep.exe tmp\beep.exe
 
       powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::CreateFromDirectory('tmp', 'beep.zip'); }"
 
